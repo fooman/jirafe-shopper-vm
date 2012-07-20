@@ -73,6 +73,7 @@ Vagrant::Config.run do |config|
     #chef.roles_path = "../my-recipes/roles"
     #chef.data_bags_path = "../my-recipes/data_bags"
     chef.add_recipe "shopper"
+    chef.add_recipe "ssl::jirafe_ca"
     #chef.add_role "web"
  
     # You may also specify custom JSON attributes:

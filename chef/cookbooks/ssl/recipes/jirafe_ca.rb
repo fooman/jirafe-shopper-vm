@@ -1,6 +1,6 @@
 cookbook_file "/usr/local/share/ca-certificates/dev-jirafe.com.crt" do
   source "dev-jirafe.com.crt"
-  mode "0600"
+  mode "0644"
 end
 
 execute "update CA certificates" do
