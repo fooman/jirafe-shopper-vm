@@ -10,6 +10,9 @@ end
 
 execute "copy any packages cached from previous instances" do
   command "cp -f /vagrant/tmp/var/cache/apt/archives/*.deb /var/cache/apt/archives/"
+  only_if do
+    File.exists?("/vagrant/tmp/var/cache/apt/archives/*.deb")
+  end
 end
 
 package "ubuntu-desktop"
